@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <script src="js/scripts.js"></script>
+  <title>Political Meter</title>
+</head>
+
+<body>
+  <div>
+    <h2>The Political Quiz</h2>
+    <h4>Let's determine how liberal, moderate, or conservative you are : ). On a scale from 1 to 10:</h4>
+    <form>
+      
+      <label for="question1"> How much do you believe in Democracy?
+      </label>
+      <input id="question1" type="number" />
+      
+      <label for="question2"> How likely it is that you will vote in the next presidential ellection?
+      </label>
+      <input id="question2" type="number" />
+
+      <label for="question3"> How much do you belive in freedom of speech?
+      </label>
+      <input id="question3" type="number" />
+
+      <h4>What color do you like the most?</h4>
+
+      <label for="color1"> blue
+      </label>
+      <input id="color1" type="checkbox" />
+
+      <label for="color2"> purple
+      </label>
+      <input id="color2" type="checkbox" />
+
+      <label for="color3"> red
+      </label>
+      <input id="color3" type="checkbox" />
+
+      <button type="submit">Submit!</button>
+
+
+</form>
+
+    <div id="liberal" class="hidden">
+      <h1>Results:</h1>
+      <p> You might not know it, but based on your answers, you are kind of </p>
+      <h5>LIBERAL</h5>
+    </div>
+
+    <div id="moderate" class="hidden">
+      <h1>Results:</h1>
+      <p> You might not know it, but based on your answers, you are kind of </p>
+      <h5>MODERATE</h5>
+    </div>
+
+    <div id="conservative" class="hidden">
+      <h1>Results:</h1>
+      <p> You might not know it, but based on your answers, you are kind of </p>
+      <h5>CONSERVATIVE</h5>
+    </div>
+  </div>
+</body>
+
+</html>

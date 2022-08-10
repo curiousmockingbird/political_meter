@@ -5,3 +5,8 @@
   .show {
     display: inherit;
   }
+
+  input {
+    display:block;
+    margin-bottom: 1%;
+  }

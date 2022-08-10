@@ -4,23 +4,28 @@ window.onload = function () {
 
   form.onsubmit = function (event) {
     event.preventDefault();
+    // target the divs with the results
+    let liberal = document.getElementById("liberal");
+    let moderate = document.getElementById("moderate");
+    let conservative = document.getElementById("conservative");
 
-    let turtles = document.getElementById("turtles");
-    let snakes = document.getElementById("snakes");
-    let lions = document.getElementById("lions");
+    // gather the input value from each question
+    const question1 = parseInt(document.querySelector("input#question1").value);
+    const question2 = parseInt(document.querySelector("input#question2").value);
+    const question3 = parseInt(document.querySelector("input#question3").value);
+    // calculates the score
+    const score = question1 + question2 + question3;
+    // gather the input value from the color quiz
+    const color1 = document.querySelector("input#color1").value;
+    const color2 = document.querySelector("input#color2").value;
+    const color3 = document.querySelector("input#color3").value;
 
-    // gather the input value
-    const animal = document.querySelector("input#animal").value;
-
-    // check if input is turtles. If so, show content. 
-    if (animal == "turtles") {
-      turtles.setAttribute("class", "show");
-      // else, check if input is snakes. If so, show content.
-    } else if (animal == "snakes") {
-      snakes.setAttribute("class", "show");
-      // else, check if input is lions. If so, show content.
-    } else if (animal == "lions") {
-      lions.setAttribute("class", "show");
-    }
+    // if input is > 5 and red, CONSERVATIVE 
+    if (score > 5 && color3 ) {
+      conservative.removeAttribute("class");
+      // else, if input > 5 and purple, MODERATE.
+    } else if (score > 5 && color2 ) {
+      moderate.removeAttribute("class");
   };
 };
+}
