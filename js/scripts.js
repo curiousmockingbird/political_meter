@@ -2,7 +2,7 @@ window.onload = function () {
 
   const form = document.querySelector("form");
 
-  form.onsubmit = function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     // target the divs with the results
     let liberal = document.getElementById("liberal");
@@ -21,11 +21,16 @@ window.onload = function () {
     const color3 = document.querySelector("input#color3").value;
 
     // if input is > 5 and red, CONSERVATIVE 
-    if (score > 5 && color3 ) {
-      conservative.removeAttribute("class");
+    if (score > 5 && score <= 10 && color1 ) {
+      liberal.removeAttribute("class");
       // else, if input > 5 and purple, MODERATE.
-    } else if (score > 5 && color2 ) {
+    } else if (score === 5 && color2  ) {
       moderate.removeAttribute("class");
-  };
-};
+  } else if (score < 5 && color3 ){
+     conservative.removeAttribute("class");
+  } else {
+    alert("There is something wrong with your selection!!!");
+  }
+  ;
+});
 }
